@@ -1,26 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import click
-import sys
-from dugite.skeleton.builder import create_project_structure
-from dugite.template.builder import initialize_files
-from dugite.controllers.builder import generate_controller
-from dugite.dependencies.checker import is_pyenv_installed, is_tfenv_installed
+from dugite.builders.skeleton import create_project_structure
+from dugite.builders.supporting_files import initialize_files
+from dugite.builders.controllers import generate_controller
 
 
 @click.group()
 def root():
-    if not is_pyenv_installed():
-        click.echo("""
-Pyenv is not installed. Please install Pyenv before using Dugite:
-https://github.com/pyenv/pyenv?tab=readme-ov-file#installation""")
-        sys.exit(1)
-
-    if not is_tfenv_installed():
-        click.echo("""
-TFenv is not installed. Please install TFenv before using Dugite:
-https://github.com/tfutils/tfenv?tab=readme-ov-file#installation""")
-        sys.exit(1)
+    pass
 
 
 @click.command(name="new", help="Create a new project.")
