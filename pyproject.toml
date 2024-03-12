@@ -1,24 +1,24 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ['hatchling']
+build-backend = 'hatchling.build'
 
 [project]
-name = "dugite"
-version = "0.0.1"
-authors = [{ name = "Vinny Osiro", email = "vinicius.osiro@gmail.com" }]
-description = "A lightweight framework for writing AWS serverless apps in Python."
-dependencies = ['click >= 8.0, < 9']
-readme = "README.md"
-requires-python = ">=3.8"
+name = 'dugite'
+version = '0.0.1'
+authors = [{ name = 'Vinny Osiro', email = 'vinicius.osiro@gmail.com' }]
+description = 'A lightweight framework for writing AWS serverless apps in Python.'
+dependencies = ['click >= 8.0, < 9', 'Jinja2 >= 3.0, < 4']
+readme = 'README.md'
+requires-python = '>=3.8'
 classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
+  'Programming Language :: Python :: 3',
+  'License :: OSI Approved :: MIT License',
+  'Operating System :: OS Independent',
 ]
 
 [project.urls]
-Homepage = "https://github.com/osiro/dugite"
-Issues = "https://github.com/osiro/dugite/issues"
+Homepage = 'https://github.com/osiro/dugite'
+Issues = 'https://github.com/osiro/dugite/issues'
 
 [project.scripts]
-dugite = "dugite.app:main"
+dugite = 'dugite.app:main'
